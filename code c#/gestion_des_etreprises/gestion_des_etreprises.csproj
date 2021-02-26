@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{514C5142-1045-4ED6-BFCB-05360A8C3CCE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>gestion_des_etreprises</RootNamespace>
+    <AssemblyName>gestion_des_etreprises</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion_des_Fournisseurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion_des_Fournisseurs.Designer.cs">
+      <DependentUpon>Gestion_des_Fournisseurs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion_des_Vendeurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion_des_Vendeurs.Designer.cs">
+      <DependentUpon>Gestion_des_Vendeurs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion_De_Achat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion_De_Achat.Designer.cs">
+      <DependentUpon>Gestion_De_Achat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion_De_Produit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion_De_Produit.Designer.cs">
+      <DependentUpon>Gestion_De_Produit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion_de_réparation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion_de_réparation.Designer.cs">
+      <DependentUpon>Gestion_de_réparation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rechercher_Des_Achats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rechercher_Des_Achats.Designer.cs">
+      <DependentUpon>Rechercher_Des_Achats.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion_des_Fournisseurs.resx">
+      <DependentUpon>Gestion_des_Fournisseurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion_des_Vendeurs.resx">
+      <DependentUpon>Gestion_des_Vendeurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion_De_Achat.resx">
+      <DependentUpon>Gestion_De_Achat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion_De_Produit.resx">
+      <DependentUpon>Gestion_De_Produit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion_de_réparation.resx">
+      <DependentUpon>Gestion_de_réparation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Rechercher_Des_Achats.resx">
+      <DependentUpon>Rechercher_Des_Achats.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
